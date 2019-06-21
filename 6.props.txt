@@ -1,0 +1,59 @@
+Props
+
+
+Property Can not be Changed once it is assigned value
+
+Component 
+
+
+Define Property in Component Text
+
+<h1>{this.props.titletext}</h1>
+<h1>{this.props.contentext}</h1>
+
+
+Use property in Calling Component
+
+<div>
+<App titletext='Hi I am Title'  content='I am Content'/>
+</div>
+
+
+
+-----
+app.js
+------
+import React, { Component } from 'react';
+  
+class App extends Component {
+  render() {
+    return (
+      <div  >
+         <h1>{this.props.titletext}</h1>
+        <h1>{this.props.contenttext}</h1>
+
+      </div>
+    );
+  }
+}
+
+export default App;
+
+
+
+index.js
+--------
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+
+ReactDOM.render(<App titletext='Home' contenttext='Welcome to HomePage' />, document.getElementById('root'));
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: http://bit.ly/CRA-PWA
+serviceWorker.unregister();
+
+

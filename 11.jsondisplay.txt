@@ -1,0 +1,52 @@
+
+
+
+Crete one demo.json file 
+
+[
+	{
+	"id":1,
+	"title" : "Hi",
+	"content" : "Welcome"
+	},
+	{
+	"id":2,
+	"title": "Hi",
+	"content" : "About"
+	},
+	{
+	"id":3,
+	"title": "Hi",
+	"content" : "Contact"
+	}
+
+]
+
+
+add file into src folder.
+
+
+
+App.js
+------
+
+
+import React from 'react';
+import JsonFile from './demo.json'
+class App extends React.Component {
+
+   render() {
+      return (
+         <div>
+         <h1>HI</h1>
+         {JsonFile.map((jsondata,index)=>{
+            return  <div>
+              <h1>{jsondata.title}</h1>
+              <p>{jsondata.content}</p>
+            </div>
+         })}
+         </div>
+      );
+   }
+}
+export default App;

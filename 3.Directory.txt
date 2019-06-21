@@ -1,0 +1,24 @@
+
+index.html will load first when you run project.
+	inside html there will be one div 
+	<div id="root"></div>
+ which will help to render the react component.	
+
+maniefest.xml (Config)
+	will contains website icons and color skin.
+
+
+app.js is default component
+	in which you can define your html/other code.
+
+	
+Index.js is Main file of Project 
+	index.js file will render component content into html file.
+
+EveryTime We need to Call ReactDOM
+It will Render the Component in React JS
+
+
+Cycle
+
+Index.js will fetch component and then it will render into html file.

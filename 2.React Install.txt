@@ -1,0 +1,44 @@
+React Install
+------------------
+
+Download React Module in Local PC Using Global Install
+
+> npm install -g create-react-app
+
+
+Download Folder Will be : 
+
+C:\Users\AkashPadhiyar\AppData\Roaming\npm\node_modules\
+
+Change Your PC UserName 
+
+Now Create New Project Using Below Command 
+
+> npx create-react-app my-app
+
+Here my-app is your projectname
+
+
+Commands: 
+
+
+npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd helloworld
+  npm start
+
+It will Run on Port No 3000
+

@@ -1,0 +1,98 @@
+Routing in React 
+
+First Download 
+
+https://www.npmjs.com/package/react-router-dom
+
+Create React App
+
+npm install --save react-router-dom
+
+
+Create 2 New Components
+	home.js
+	about.js
+
+Home.js
+-------
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+class Home extends React.Component{
+    render()
+    {
+        return(
+            <div>
+            <p>  I am Home Page</p>
+            </div>
+        )
+    }
+}
+export default Home;
+
+
+About.js
+--------
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+class About extends React.Component{
+    render()
+    {
+        return(
+            <div style='background-color:red;'>
+            <p>I am About us</p>
+            </div>
+        )
+    }
+
+}
+export default About;
+
+
+App.js
+------
+Import Routing Module in App.js 
+
+import { BrowserRouter as Router,Switch, Route, Link } from 'react-router-dom'
+
+Also Import Home and About Component in App.js
+
+import Home from './Home'; 
+import About from './About'; 
+
+
+App.js
+-------
+import React, { Component } from 'react';
+import { BrowserRouter as Router,Switch, Route, Link } from 'react-router-dom'
+import Home from './Home'; 
+import About from './About'; 
+import './App.css';
+
+class App extends Component {
+  render() {
+    return (
+      <Router>
+       <div> 
+          <Link to={'/'}>Home</Link>
+          <Link to={'/about'}>About</Link>
+        <Switch>
+       <Route exact path='/' Component={Home} /> 
+       <Route exact path='/about' Component={About} /> 
+        </Switch>
+      </div>
+      </Router>
+    );
+  }
+}
+export default App;
+
+
+
+
+
+Import Module in App.js
+
+import { BrowserRouter as Router,Switch, Route, Link } from 'react-router-dom'
+	
+
+https://medium.freecodecamp.org/beginners-guide-to-react-router-4-8959ceb3ad58

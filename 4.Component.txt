@@ -1,0 +1,108 @@
+Create Component in React 
+
+
+By Default React js Will Create App.js Component.
+It will Render in Index.js.
+
+
+How to Create New Component ? 
+-----------------------------
+Create New File  in Src Folder Named Comp1.js
+And Write Below Code 
+
+
+	import React, { Component } from 'react';
+
+
+	class Comp1 extends Component {
+ 	 render() {
+  	  return (
+  		   <p>Hi I am Component 1 </p>
+  	  );
+ 	 }
+	}
+
+	export default Comp1
+
+
+Now Call Comp1.js in Index.js
+First It will Automatically Import Component in 
+
+import Comp1 from './Comp1';
+
+ReactDOM.render(<Comp1 /> , document.getElementById('root'));
+
+
+Note : To Render Multiple Line use Div Tag in Render
+  	<div>
+   		  <p>Hi I am Component1</p>
+    		 <p>Hi I am Component2</p>
+        </div>
+
+
+Basic Component in Index.js
+--------------------------
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+ 
+class HelloWorld extends React.Component{
+ 
+    render()
+    {
+        return(
+
+            <h1>HelloWorld</h1>
+        )
+    }
+
+}
+
+ReactDOM.render(<HelloWorld/>,document.getElementById('root'))
+
+
+
+-----------------
+
+Multiple Component in Same Page
+----------------------------------
+
+import React, { Component } from 'react';
+
+class Comp1 extends Component {
+  render() {
+    return (
+     <p>Hi I am Component1</p>
+    );
+  }
+}
+
+class Comp2 extends Component {
+    render() {
+      return (
+       <p>Hi I am Component2</p>
+      );
+    }
+  }
+
+  class MainComponent extends React.Component{
+ 
+    render()
+    {
+        return(
+            <div>
+                <Comp1 />
+                <Comp2 />
+            </div>
+        )
+    }
+
+}
+export default MainComponent;
+
+
+index.js
+
+ReactDOM.render(<MainComponent /> , document.getElementById('root'));
+
+ 
